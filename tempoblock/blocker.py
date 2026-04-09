@@ -108,9 +108,9 @@ class Blocker:
 
     def block_sites(
         self,
-        sites: list[str],
+        sites: "list[str]",
         duration_minutes: int,
-        app_names: Optional[list[str]] = None,
+        app_names: "Optional[list[str]]" = None,
     ):
         """
         Block websites (and optionally apps) for a duration.
