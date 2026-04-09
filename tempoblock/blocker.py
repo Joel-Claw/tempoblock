@@ -1,6 +1,7 @@
 """
 Core blocking functionality
-"""
+""
+from __future__ import annotations
 
 import json
 import os
@@ -8,7 +9,7 @@ import platform
 import shutil
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 from rich.console import Console
 
@@ -108,9 +109,9 @@ class Blocker:
 
     def block_sites(
         self,
-        sites: "list[str]",
+        sites: List[str],
         duration_minutes: int,
-        app_names: "Optional[list[str]]" = None,
+        app_names: Optional[List[str]] = None,
     ):
         """
         Block websites (and optionally apps) for a duration.
