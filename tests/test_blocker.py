@@ -2,12 +2,9 @@
 Tests for Tempoblock
 """
 
-import tempfile
-from pathlib import Path
 
-import pytest
 
-from tempoblock.blocker import Blocker, WEBSITE_ALIASES
+from tempoblock.blocker import WEBSITE_ALIASES
 from tempoblock.cli import parse_duration
 
 

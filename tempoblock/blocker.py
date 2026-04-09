@@ -6,7 +6,6 @@ import json
 import os
 import platform
 import shutil
-import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
