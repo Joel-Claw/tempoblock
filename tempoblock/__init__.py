@@ -9,6 +9,6 @@ __version__ = "0.1.0"
 __author__ = "Joel Claw"
 
 from .blocker import Blocker
-from .timer import Timer
+from .cli import main
 
-__all__ = ["Blocker", "Timer"]
+__all__ = ["Blocker", "main"]
