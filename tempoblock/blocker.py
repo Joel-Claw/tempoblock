@@ -57,7 +57,9 @@ class Blocker:
         elif self.system == "Darwin":
             self.hosts_path = Path("/etc/hosts")
         elif self.system == "Windows":
-            self.hosts_path = Path(os.environ["SYSTEMROOT"]) / "system32" / "drivers" / "etc" / "hosts"
+            self.hosts_path = (
+                Path(os.environ["SYSTEMROOT"]) / "system32" / "drivers" / "etc" / "hosts"
+            )
         else:
             raise RuntimeError(f"Unsupported system: {self.system}")
 
@@ -168,7 +170,9 @@ class Blocker:
             )
             self._save_state(state)
 
-            console.print(f"[green]✓ Blocked {len(domains)} domains for {duration_minutes}m[/green]")
+            console.print(
+                f"[green]✓ Blocked {len(domains)} domains for {duration_minutes}m[/green]"
+            )
             if app_names:
                 console.print(f"[green]  Apps: {', '.join(app_names)}[/green]")
 

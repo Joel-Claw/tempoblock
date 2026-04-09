@@ -2,8 +2,6 @@
 Tests for Tempoblock
 """
 
-
-
 from tempoblock.blocker import WEBSITE_ALIASES
 from tempoblock.cli import parse_duration
 
